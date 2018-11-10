@@ -1,32 +1,41 @@
 @import "../global.pcss";
 
 .card {
+  background-image: linear-gradient(22deg, #fff, #aaa);
+  box-shadow: 5px 5px 10px #111;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
 
   & h2 {
-
+    font-size: 2rem;
   }
 
   & .image {
-
+    max-width: 100%;
   }
 
   & p {
-
+  font-size: 1rem;
   }
 
   & button {
-
+    background-image: linear-gradient(2deg, var(--button-color-top), var(--button-color-bottom));
+    font-size: 1rem;
+    padding: 10px;
     &.ok {
-
+      --button-color-top: #9088ec;
+      --button-color-bottom: #665ce6;
       &:hover {
-
+        background: color-mod(#9088ec lightness(30%));
       }
     }
 
     &.cancel {
-
+      --button-color-top: green;
+      --button-color-bottom: lightgreen;
       &:hover {
-
+        background: color-mod(green lightness(30%));
       }
     }
   }
