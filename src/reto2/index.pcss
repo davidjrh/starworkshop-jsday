@@ -10,16 +10,38 @@
   --penguin-size: 200px;
 
   & .head {
+    height: 100px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     & .eyes {
-      --eye-size: ...;
-      --pupil-size: ...;
+      --eye-size: 80px;
+      --pupil-size: 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      width: calc(var(--eye-size) * 2 + var(--eye-size) / 2);
 
       & .eye {
         --eye-x: 0;
         --eye-y: 0;
+        background-color: #fff;
+        width: calc(var(--eye-size));
+        height: calc(var(--eye-size));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: calc(var(--eye-size) / 2);
 
         & .pupil {
+          width: var(--pupil-size);
+          height: var(--pupil-size);
+          transform: translate(var(--eye-x), var(--eye-y));
+          transition: transform 0.5s ease;
+          background-color: #000;
+          border-radius: calc(var(--pupil-size) / 2);
 
         }
       }

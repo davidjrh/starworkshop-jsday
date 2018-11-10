@@ -17,6 +17,15 @@ const updateMouse = event => {
   const y = direction(mouse.y - ref.y);
 
   // change eye value
+  const leftEye = document.querySelector('.left.eye');
+  leftEye.style.setProperty('--eye-x',`${x}px;`);
+  leftEye.style.setProperty('--eye-y',`${y}px;`);
+
+    // change eye value
+  const rightEye = document.querySelector('.right.eye');
+  rightEye.style.setProperty('--eye-x',`${x}px;`);
+  rightEye.style.setProperty('--eye-y',`${y}px;`);
+
 };
 
 document.body.onmousemove = updateMouse;
